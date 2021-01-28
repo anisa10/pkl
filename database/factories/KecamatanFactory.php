@@ -3,17 +3,17 @@
 namespace Database\Factories;
 use Faker\Generator as Faker;
 use App\Models\Kota;
-use App\Models\Provinsi;
+use App\Models\Kecamatan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class KotaFactory extends Factory
+class KecamatanFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Kota::class;
+    protected $model = Kecamatan::class;
 
     /**
      * Define the model's default state.
@@ -22,11 +22,11 @@ class KotaFactory extends Factory
      */
     public function definition()
     {
-        $factory->definition(Kota::class, function (Faker $faker) {
+        $factory->definition(Kecamatan::class, function (Faker $faker) {
             return [
-                'kode_kota' => $faker-> number,
-                'id_provinsi'  => $faker-> sentence,
-                'nama_kota'  => $faker-> sentence,
+                'kode_Kecamatan' => $faker-> number,
+                'id_kota'  => $faker-> sentence,
+                'nama_Kecamatan'  => $faker-> sentence,
             ];
             });
     }

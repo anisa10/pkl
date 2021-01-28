@@ -23,8 +23,7 @@ class ProvinsiFactory extends Factory
     {
         $factory->definition(Provinsi::class, function (Faker $faker) {
         return [
-            'id' => $faker-> number(0, 100000),
-            'kode_provinsi' => $faker-> number(0, 100000),
+            'kode_provinsi' => $faker-> number,
             'nama_provinsi'  => $faker-> sentence,
         ];
         });
