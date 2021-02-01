@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  Route::get('Provinsi/{id}', [ApiController::class, 'provkota']);
 
 Route::get('/provinsi', [ProvinsiController::class, 'index']);
-Route::post('/provinsi/store', [ProvinsiController::class, 'strore']);
+Route::post('/provinsi/store', [ProvinsiController::class, 'store']);
 Route::get('/provinsi/{id}', [ProvinsiController::class, 'show']);
 Route::put('/provinsi/update/{id}', [ProvinsiController::class, 'update']);
 Route::delete('/provinsi/{id?}', [ProvinsiController::class, 'destroy']);
