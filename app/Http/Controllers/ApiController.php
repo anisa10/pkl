@@ -12,18 +12,18 @@ class ApiController extends Controller
         $provinsi = Provinsi::all();
         $data = [
             'status' => 200,
-            '$data' => $provinsi,
+            'data' => $provinsi,
             'message' => 'Berhasil'
         ];
         return response()->json($data);
     }
 
-    public function provinsixkota($id)
+    public function provkota($id)
     {
         $provinsi = Provinsi::with('kota')->where('id', $id)->get();
-        $data = [
+        $data = [ 
             'status' => 200,
-            '$data' => $provinsi,
+            'data' => $provinsi,
             'message' => 'Berhasil'
         ];
         return response()->json($data);

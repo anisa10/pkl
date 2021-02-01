@@ -21,11 +21,11 @@
                       <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Nama Rw</b</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="nama_rw">
-                        @if($errors->has('nama_rw'))
-                           <span class="text-danger">{{ $errors->first('nama_rw')}}</span>
-                        @endif
+                        <input type="text" class="form-control" value="{{@old('nama_rw')}}" id="exampleInputPassword1" name="nama_rw">
                     </div>
+                    @error('nama_rw')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                      </div>
                     <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>

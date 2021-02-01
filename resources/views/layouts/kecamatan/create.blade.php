@@ -14,14 +14,14 @@
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Kode Kecamatan</b></label>
                         <input type="text" class="form-control" id="exampleInputPassword1" name="kode_kecamatan">
-                        @if($errors->has('kode_kecamatan'))
+                        <!-- @if($errors->has('kode_kecamatan'))
                            <span class="text-danger">{{ $errors->first('kode_kecamatan')}}</span>
-                        @endif
+                        @endif -->
                     </div>
                      <div class="form-group">
                         <label for="">Kota</label>
                         <select name="id_kota" class="form-control" required>
-                            @foreach($kota as $data)
+                             @foreach($kota as $data)
                                 <option value="{{$data->id}}">{{$data->nama_kota}}</option>
                             @endforeach
                         </select>
@@ -29,11 +29,11 @@
                       <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Nama Kecamatan</b></label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="nama_kecamatan">
-                        @if($errors->has('nama_kecamatan'))
-                           <span class="text-danger">{{ $errors->first('nama_kecamatan')}}</span>
-                        @endif
+                        <input type="text" class="form-control"  value="{{@old('nama_kecamatan')}}" id="exampleInputPassword1" name="nama_kecamatan">
                     </div>
+                    @error('nama_kecamatan')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                      </div>
                     <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>

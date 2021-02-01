@@ -13,19 +13,19 @@
                      <div class="form-group">
                         <label for="">Kecamatan</label>
                         <select name="id_kecamatan" class="form-control" required>
-                            @foreach($kecamatan as $data)
+                             @foreach($kecamatan as $data)
                                 <option value="{{$data->id}}">{{$data->nama_kecamatan}}</option>
-                            @endforeach
+                            @endforeach 
                         </select>
                     </div>
                       <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Nama Kelurahan</b</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="nama_kelurahan">
-                        @if($errors->has('nama_kelurahan'))
-                           <span class="text-danger">{{ $errors->first('nama_kelurahan')}}</span>
-                        @endif
+                        <input type="text" class="form-control" value="{{@old('nama_kelurahan')}}" id="exampleInputPassword1" name="nama_kelurahan">
                     </div>
+                    @error('nama_kelurahan')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                      </div>
                     <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>

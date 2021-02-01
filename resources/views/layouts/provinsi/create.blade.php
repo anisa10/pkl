@@ -12,21 +12,19 @@
                     @csrf
                    <div class="form-group">
                     <div class="mb-12>
-                        <label for="exampleInputEmail1" class="form-label">Kode Provinsi</label>
+                        <label for="exampleInputEmail1" class="form-label"><b>Kode Provinsi</b></label>
                         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="kd_prov">
-                        @if($errors->has('kd_prov'))
-                           <span class="text-danger">{{ $errors->first('kd_prov')}}</span>
-                        @endif
+                        
                     </div>
                      </div>
                       <div class="form-group">
                     <div class="mb-12>
-                        <label for="exampleInputPassword1" class="form-label">Provinsi</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="nm_prov">
-                        @if($errors->has('nm_prov'))
-                           <span class="text-danger">{{ $errors->first('nm_prov')}}</span>
-                        @endif
+                        <label for="exampleInputPassword1" class="form-label"><b>Provinsi</b></label>
+                        <input type="text" class="form-control" value="{{@old('nm_prov')}}" id="exampleInputPassword1" name="nm_prov">
                     </div>
+                    @error('nm_prov')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                      </div>
                     <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
