@@ -131,7 +131,7 @@ class ProvinsiController extends Controller
 
     public function destroy($id)
     {
-        $provinsi = Provinsi::findOrFail($id);
+        $provinsi = Provinsi::whereId($id)->first();
         $provinsi->delete();
 
         if ($provinsi) {
