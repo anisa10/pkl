@@ -69,7 +69,7 @@
     </div>
     </div>
          <div class="container " >
-                <br><h1 class="display-3 text-center">Trascking Covid</h1>
+                <br><h1 class="display-3 text-center">Tracking Covid</h1>
 		<p class="lead m-0 text-center">Coronavirus Global &amp; Indonesia Live Data</p>
         
             <div class="row">
