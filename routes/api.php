@@ -29,6 +29,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  Route::get('Sembuh', [ApiController::class, 'sembuh']);
  Route::get('Meninggal', [ApiController::class, 'meninggal']);
 
+ Route::get('/global', [ApiController::class, 'global']);
 
 // API CRUD
  Route::get('/provinsi', [ProvinsiController::class, 'index']);

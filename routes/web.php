@@ -20,6 +20,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/i', function(){
+    return view('layouts.master');
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+use App\Http\Controllers\BerandaController;
+Route::resource('beranda',BerandaController::class);
 
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi',ProvinsiController::class);
@@ -47,4 +55,4 @@ Route::resource('kasus',KasusController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'provinsi'])->name('dashboard');
