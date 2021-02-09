@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.dashboard.index');
 });
 
 Auth::routes();
@@ -23,11 +23,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/i', function(){
     return view('layouts.master');
 });
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-use App\Http\Controllers\BerandaController;
-Route::resource('beranda',BerandaController::class);
+Route::get('/index', function(){
+    return view('layouts.dashboard.index');
+});
 
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi',ProvinsiController::class);

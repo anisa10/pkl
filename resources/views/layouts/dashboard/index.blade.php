@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,8 +15,35 @@
   </head>
   <body >
 
+  <div class="header hor-header">
+					<div class="container">
+                    <div class="bg-light">
+  <div class="container ">
+            <div class="row">
+                <div class="col-sm">
+        <nav class="navbar navbar-light bg-white" style="background-color: #fff;">
+        <span class="navbar-brand mb-0 h1">Anisaa</span>
+        
+        <body class="antialiased">
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">LOGIN</a>
 
-    
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">REGISTER</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+    </span>
+        </nav>
+  
+    </div>
+    </div>
 
     <?php
         $datapositif = file_get_contents("https://api.kawalcorona.com/positif");
@@ -37,21 +65,15 @@
   <div class="container ">
             <div class="row">
                 <div class="col-sm">
-        <nav class="navbar navbar-light bg-white" style="background-color: #fff;">
-        </nav>
   
     </div>
     </div>
          <div class="container " >
-   
-   
+                <br><h1 class="display-3 text-center">Trascking Covid</h1>
+		<p class="lead m-0 text-center">Coronavirus Global &amp; Indonesia Live Data</p>
+        
             <div class="row">
                 <div class="col-sm">
-                <div class="alert bg-success img-card box-secondary-shadow" role="alert">
-                <div class="text-white">
-                <h1 class="font-weight-bolder text-white mb-0"><center>Tracking Covid</center> </h1>
-                    </div>
-                </div>
                 </div>
             </div>
             <br>
