@@ -14,18 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.dashboard.index');
+    return view('dashboard.index');
 });
+
+// Route FrontEnd
+use App\Http\Controllers\DashboardController;
+Route::resource('/', DashboardController::class);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/i', function(){
-    return view('layouts.master');
-});
-Route::get('/index', function(){
-    return view('layouts.dashboard.index');
-});
+
 
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi',ProvinsiController::class);
@@ -52,5 +51,3 @@ use App\Http\Controllers\KasusController;
 Route::resource('kasus',KasusController::class);
 
 Auth::routes();
-
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'provinsi'])->name('dashboard');

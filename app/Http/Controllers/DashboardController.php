@@ -1,51 +1,65 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Provinsi;
-use App\Models\Kecamatan;
-use App\Models\Dashboard;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use DB;
+use App\Http\Models\Provinsi;
+use App\Http\Models\Kota;
+use App\Http\Models\Kecamatan;
+use App\Http\Models\Kelurahan;
+use App\Http\Models\RW;
+use App\Http\Models\Tracking;
+use Illuminate\Support\Carbon;
 
 class DashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public $data=[];
+
+    
+
     public function index()
     {
-       return view('layouts.dashboard.index');
-    }
-    public function indonesia()
-    {
-        $positif = DB::table('tracking')
-        ->select('tracking.positif')
-        ->sum ('tracking.positif');
+        // Count Up
+        $positif = DB::table('rws')
+            ->select('trackings.positif',
+            'trackings.sembuh', 'trackings.meninggal')
+            ->join('trackings','rws.id','=','trackings.id_rw')
+            ->sum('trackings.positif'); 
+        $sembuh = DB::table('rws')
+            ->select('trackings.positif',
+            'trackings.sembuh','trackings.meninggal')
+            ->join('trackings','rws.id','=','trackings.id_rw')
+            ->sum('trackings.sembuh');
+        $meninggal = DB::table('rws')
+            ->select('trackings.positif',
+            'trackings.sembuh','trackings.meninggal')
+            ->join('trackings','rws.id','=','trackings.id_rw')
+            ->sum('trackings.meninggal');
+        $global = file_get_contents('https://api.kawalcorona.com/positif');
+        $posglobal = json_decode($global, TRUE);
 
-    $sembuh = DB::table('tracking')    
-        ->select('tracking.sembuh')
-        ->sum ('tracking.sembuh');
-    
-    $meninggal = DB::table('tracking')    
-        ->select('tracking.meninggal')
-        ->sum ('tracking.meninggal');    
-    $data=[
-        'nama'=>'indonesia',
-        'positif'=>$positif,
-        'sembuh'=>$sembuh, 
-        'meninggal'=>$meninggal,
-    ];
-        
-        return view('layouts.dashboard.index',compact('positif'));
-    }
-    public function provinsi()
-    {
-        $provinsi=Provinsi::all();
-        return view('layouts.dashboard.index',compact('provinsi'));
+        // Date
+        $tanggal = Carbon::now()->format('D d-M-Y');
 
+        // Table Provinsi
+        $tampil = DB::table('provinsis')
+                  ->join('kotas','kotas.id_provinsi','=','provinsis.id')
+                  ->join('kecamatans','kecamatans.id_kota','=','kotas.id')
+                  ->join('kelurahans','kelurahans.id_kecamatan','=','kecamatans.id')
+                  ->join('rws','rws.id_kelurahan','=','kelurahans.id')
+                  ->join('trackings','trackings.id_rw','=','rws.id')
+                  ->select('nama_provinsi',
+                          DB::raw('SUM(trackings.positif) as Positif'),
+                          DB::raw('SUM(trackings.sembuh) as Sembuh'),
+                          DB::raw('SUM(trackings.meninggal) as Meninggal'))
+                  ->groupBy('nama_provinsi')->orderBy('nama_provinsi','ASC')
+                  ->get();
+
+        // Table Global
+        $datadunia= file_get_contents("https://api.kawalcorona.com/");
+        $dunia = json_decode($datadunia, TRUE);
+            
+        return view('dashboard.index',compact('positif','sembuh','meninggal','posglobal', 'tanggal','tampil','dunia'));
     }
 
     /**
@@ -72,10 +86,10 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Dashboard $dashboard)
+    public function show($id)
     {
         //
     }
@@ -83,10 +97,10 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dashboard $dashboard)
+    public function edit($id)
     {
         //
     }
@@ -95,10 +109,10 @@ class DashboardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dashboard $dashboard)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -106,10 +120,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dashboard $dashboard)
+    public function destroy($id)
     {
         //
     }
