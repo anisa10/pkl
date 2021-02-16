@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Tracking Covid-19</title>
+  <title>Tracking Covid</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
   <header id="header" class="top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Tracking<span>Covid-19</span></a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">Tracking<span>Covid</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
@@ -52,13 +52,13 @@
           <li class="active"><a href="http://127.0.0.1:8000/">Halaman Utama</a></li>
           <li class="drop-down"><a href="">Data Kasus</a>
             <ul>
-              <li><a href="#provinsi">Data Kasus Lokal</a></li>
+              <li><a href="#provinsi">Data Kasus Indonesia</a></li>
               <li><a href="#global">Data Kasus Global</a></li>
             </ul>
           </li>
           <li><a href="#services">Pelayanan</a></li>
           <li><a href="#faq">F.A.Q</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <!-- <li><a href="#contact">Kontak</a></li> -->
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -69,7 +69,7 @@
   <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h1>Selamat Datang di <span>TrackingCovid-19</spa>
+        <h1>Selamat Datang di <span>TrackingCovid</spa>
         </h1>
         <h2>Data Coronavirus Indonesia dan Global Terupdate</h2>
         </div>
@@ -371,7 +371,7 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
+      <!-- <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Kontak</h2>
@@ -407,8 +407,8 @@
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0" src="https://goo.gl/maps/o1csNgqLTSCNomgi8" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+        <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://google/maps/o1csNgqLTSCNomgi8" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
           </div>
 
           <div class="col-lg-6">
@@ -442,7 +442,7 @@
 
         </div>
 
-      </div>
+      </div> -->
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
@@ -455,7 +455,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-8 footer-contact">
-            <h3>Tracking<span>Covid-19</span></h3>
+            <h3>Tracking<span>Covid</span></h3>
             <p>
               Jl. Situ Tarate, Cibaduyut Raya <br>
               Kec. Dayeuhkolot<br>
@@ -473,12 +473,12 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Data Kasus Global</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#services">Layanan</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#faq">F.A.Q</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kontak</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kontak</a></li> -->
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-8 footer-links">
-            <h4>Media Sosial Kami</h4>
+            <h4>Media Sosial</h4>
             <p>Ini dianatara nya media sosial kami</p>
             <div class="social-links mt-6">
               <a href="https://www.facebook.com/smkassalaam/" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -491,18 +491,18 @@
       </div>
     </div>
 
-    <div class="container py-4">
+<!-- <div class="container py-4">
       <div class="copyright">
         &copy; Copyright <strong><span>TrackingCovid-19</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <div class="credits"> -->
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-        Designed by <a href="https://smkassalaambandung.sch.id/">SMK ASSALAAM BANDUNG</a>
+        <!-- P    urchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        <!-- Designed by <a href="https://smkassalaambandung.sch.id/">SMK ASSALAAM BANDUNG</a>
       </div>
-    </div>
+    </div> -->
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>

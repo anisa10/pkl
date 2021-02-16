@@ -15,8 +15,6 @@ use Illuminate\Support\Carbon;
 class DashboardController extends Controller
 {
 
-    
-
     public function index()
     {
         // Count Up
