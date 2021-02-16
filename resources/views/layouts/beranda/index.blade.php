@@ -14,7 +14,7 @@
             <div class="small-box bg-info">
               <div class="inner">
               <p>Jumlah Positif</p>
-                <span data-toggle="counter-up">{{ $positif }}</span>
+              <span style="font-size: 25px;" data-toggle="counter-up"><b>{{ $positif }}</b></span>
                 <p>Orang</p>
               </div>
               <div class="icon">
@@ -28,7 +28,7 @@
             <div class="small-box bg-success">
               <div class="inner">
               <p>Jumlah Sembuh</p>
-                <span data-toggle="counter-up">{{ $sembuh }}</span>
+                <span style="font-size: 25px;" data-toggle="counter-up"><b>{{ $sembuh }}</b></span>
                 <p>Orang</p>
               </div>
               <div class="icon">
@@ -41,7 +41,7 @@
             <div class="small-box bg-danger">
               <div class="inner">
                 <p>Jumlah Meninggal</p>
-                <span data-toggle="counter-up">{{ $meninggal }}</span>
+                <span style="font-size: 25px;" data-toggle="counter-up"><b>{{ $meninggal }}</b></span>
                 <p>Orang</p>
               </div>
               <div class="icon">
