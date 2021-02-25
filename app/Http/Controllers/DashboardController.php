@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
-use DB;
 use App\Http\Models\Provinsi;
-use App\Http\Models\Kota;
-use App\Http\Models\Kecamatan;
-use App\Http\Models\Kelurahan;
 use App\Http\Models\RW;
 use App\Http\Models\Tracking;
+use DB;
 use Illuminate\Support\Carbon;
 
 class DashboardController extends Controller
@@ -19,11 +16,11 @@ class DashboardController extends Controller
     {
         // Count Up
         $positif = DB::table('trackings')
-            ->sum('tracking.positif'); 
+            ->sum('positif'); 
         $sembuh = DB::table('trackings')
-            ->sum('tracking.sembuh');
+            ->sum('sembuh');
         $meninggal = DB::table('trackings')
-            ->sum('tracking.meninggal');
+            ->sum('meninggal');
 
         $global = file_get_contents('https://api.kawalcorona.com/positif');
         $posglobal = json_decode($global, TRUE);
@@ -52,69 +49,5 @@ class DashboardController extends Controller
         return view('dashboard.index',compact('positif','sembuh','meninggal','posglobal', 'tanggal','tampil','dunia'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }
