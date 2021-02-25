@@ -18,21 +18,13 @@ class DashboardController extends Controller
     public function index()
     {
         // Count Up
-        $positif = DB::table('rws')
-            ->select('trackings.positif',
-            'trackings.sembuh', 'trackings.meninggal')
-            ->join('trackings','rws.id','=','trackings.id_rw')
-            ->sum('trackings.positif'); 
-        $sembuh = DB::table('rws')
-            ->select('trackings.positif',
-            'trackings.sembuh','trackings.meninggal')
-            ->join('trackings','rws.id','=','trackings.id_rw')
-            ->sum('trackings.sembuh');
-        $meninggal = DB::table('rws')
-            ->select('trackings.positif',
-            'trackings.sembuh','trackings.meninggal')
-            ->join('trackings','rws.id','=','trackings.id_rw')
-            ->sum('trackings.meninggal');
+        $positif = DB::table('trackings')
+            ->sum('positif'); 
+        $sembuh = DB::table('trackings')
+            ->sum('sembuh');
+        $meninggal = DB::table('trackings')
+            ->sum('meninggal');
+
         $global = file_get_contents('https://api.kawalcorona.com/positif');
         $posglobal = json_decode($global, TRUE);
 
