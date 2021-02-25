@@ -14,128 +14,206 @@ class KotaSeeder extends Seeder
     public function run()
     {
         DB::table('kotas')->insert([
-
-            // Aceh
-            ['id' => 20, "id_provinsi" => 11, "kode_kota" => 101, "nama_kota" => "Kabupaten Aceh Barat"],
-            ['id' => 21, "id_provinsi" => 11, "kode_kota" => 102, "nama_kota" => "Kabupaten Aceh Besar"],
-            ['id' => 22, "id_provinsi" => 11, "kode_kota" => 103, "nama_kota" => "Kabupaten Aceh Jaya"],
-
-            // Sumatera Utara
-            ['id' => 23, "id_provinsi" => 12, "kode_kota" => 104, "nama_kota" => "Kabupaten Asahan"],
-            ['id' => 24, "id_provinsi" => 12, "kode_kota" => 105, "nama_kota" => "Kabupaten Langkat"],
-            ['id' => 25, "id_provinsi" => 12, "kode_kota" => 106, "nama_kota" => "Kabupaten Nias"],
-
-            // Sumatera Selatan
-            ['id' => 26, "id_provinsi" => 13, "kode_kota" => 107, "nama_kota" => "Kota Palembang"],
-            ['id' => 27, "id_provinsi" => 13, "kode_kota" => 108, "nama_kota" => "Kabupaten Banyuasin"],
-            ['id' => 28, "id_provinsi" => 13, "kode_kota" => 109, "nama_kota" => "Kabupaten Musi Rawas"],
-
-            // Riau
-            ['id' => 29, "id_provinsi" => 14, "kode_kota" => 110, "nama_kota" => "Kabupaten Bengkalis"],
-            ['id' => 30, "id_provinsi" => 14, "kode_kota" => 111, "nama_kota" => "Kabupaten Siak"],
-            ['id' => 31, "id_provinsi" => 14, "kode_kota" => 112, "nama_kota" => "Kabupaten Kampar"],
-
-            // Jambi
-            ['id' => 32, "id_provinsi" => 15, "kode_kota" => 113, "nama_kota" => "Kabupaten Merangin"],
-            ['id' => 33, "id_provinsi" => 15, "kode_kota" => 114, "nama_kota" => "Kabupaten Tebo"],
-            ['id' => 34, "id_provinsi" => 15, "kode_kota" => 115, "nama_kota" => "Kota Sungaipenuh"],
-
-            // Bengkulu
-            ['id' => 35, "id_provinsi" => 16, "kode_kota" => 116, "nama_kota" => "Kabupaten Kaur"],
-            ['id' => 36, "id_provinsi" => 16, "kode_kota" => 117, "nama_kota" => "Kabupaten Lebong"],
-            ['id' => 37, "id_provinsi" => 16, "kode_kota" => 118, "nama_kota" => "Kabupaten Kapahiang"],
-
-            // Bangka Belitung
-            ['id' => 38, "id_provinsi" => 17, "kode_kota" => 119, "nama_kota" => "Kabupaten Bangka Tengah"],
-            ['id' => 39, "id_provinsi" => 17, "kode_kota" => 120, "nama_kota" => "Kabupaten Bangka Barat"],
-            ['id' => 40, "id_provinsi" => 17, "kode_kota" => 121, "nama_kota" => "Kabupaten Bangka Selatan"],
-
-            // Sumatera Barat
-            ['id' => 41, "id_provinsi" => 18, "kode_kota" => 122, "nama_kota" => "Kota Padang"],
-            ['id' => 42, "id_provinsi" => 18, "kode_kota" => 123, "nama_kota" => "Kabupaten Pasaman"],
-            ['id' => 43, "id_provinsi" => 18, "kode_kota" => 124, "nama_kota" => "Kota Agam"],
-
-            // Lampung
-            ['id' => 44, "id_provinsi" => 19, "kode_kota" => 125, "nama_kota" => "Kota Bandar Lampung"],
-            ['id' => 45, "id_provinsi" => 19, "kode_kota" => 126, "nama_kota" => "Kota Metro"],
-            ['id' => 46, "id_provinsi" => 19, "kode_kota" => 127, "nama_kota" => "Kabupaten Tanggamus"],
-
-            // Banten
-            ['id' => 47, "id_provinsi" => 20, "kode_kota" => 128, "nama_kota" => "Kota Cilegon"],
-            ['id' => 48, "id_provinsi" => 20, "kode_kota" => 129, "nama_kota" => "Kota Serang"],
-            ['id' => 49, "id_provinsi" => 20, "kode_kota" => 130, "nama_kota" => "Kota Tangerang"],
-
-            // DKI Jakarta
-            ['id' => 50, "id_provinsi" => 21, "kode_kota" => 131, "nama_kota" => "Kepulauan Seribu"],
-            ['id' => 51, "id_provinsi" => 21, "kode_kota" => 132, "nama_kota" => "Jakarta Pusat"],
-            ['id' => 52, "id_provinsi" => 21, "kode_kota" => 133, "nama_kota" => "Jakarta Barat"],
-
-            // Jawa Barat
-            ['id' => 53, "id_provinsi" => 22, "kode_kota" => 134, "nama_kota" => "Kota Bandung"],
-            ['id' => 54, "id_provinsi" => 22, "kode_kota" => 135, "nama_kota" => "Kota Bekasi"],
-            ['id' => 55, "id_provinsi" => 22, "kode_kota" => 136, "nama_kota" => "Kota Bogor"],
-
-            // Jawa Timur
-            ['id' => 56, "id_provinsi" => 23, "kode_kota" => 137, "nama_kota" => "Kota Blitar"],
-            ['id' => 57, "id_provinsi" => 23, "kode_kota" => 138, "nama_kota" => "Kota Kediri"],
-            ['id' => 58, "id_provinsi" => 23, "kode_kota" => 139, "nama_kota" => "Kota Malang"],
-
-            // Jawa Tengah
-            ['id' => 59, "id_provinsi" => 24, "kode_kota" => 140, "nama_kota" => "Kota Magelang"],
-            ['id' => 60, "id_provinsi" => 24, "kode_kota" => 141, "nama_kota" => "Kota Pekalongan"],
-            ['id' => 61, "id_provinsi" => 24, "kode_kota" => 142, "nama_kota" => "Kota Semarang"],
-
-            // DI Yogyakarta
-            ['id' => 62, "id_provinsi" => 25, "kode_kota" => 143, "nama_kota" => "Kabupaten Bantul"],
-            ['id' => 63, "id_provinsi" => 25, "kode_kota" => 144, "nama_kota" => "Kota Yogyakarta"],
-            ['id' => 64, "id_provinsi" => 25, "kode_kota" => 145, "nama_kota" => "Kabupaten Sleman"],
-
-            // Bali
-            ['id' => 65, "id_provinsi" => 26, "kode_kota" => 146, "nama_kota" => "Kabupaten Buleleng"],
-            ['id' => 66, "id_provinsi" => 26, "kode_kota" => 147, "nama_kota" => "Kota Denpasar"],
-            ['id' => 67, "id_provinsi" => 26, "kode_kota" => 148, "nama_kota" => "Kabupaten Tabanan"],
-
-            // NTB
-            ['id' => 68, "id_provinsi" => 27, "kode_kota" => 149, "nama_kota" => "Kabupaten Lombok Barat"],
-            ['id' => 69, "id_provinsi" => 27, "kode_kota" => 150, "nama_kota" => "Kabupaten Dompu"],
-            ['id' => 70, "id_provinsi" => 27, "kode_kota" => 151, "nama_kota" => "Kabupaten Bima"],
-
-            // NTT
-            ['id' => 71, "id_provinsi" => 28, "kode_kota" => 152, "nama_kota" => "Kabupaten Flores Timur"],
-            ['id' => 72, "id_provinsi" => 28, "kode_kota" => 153, "nama_kota" => "Kabupaten Kupang"],
-            ['id' => 73, "id_provinsi" => 28, "kode_kota" => 154, "nama_kota" => "Kabupaten Alor"],
-
-            // Kalimantan Barat
-            ['id' => 74, "id_provinsi" => 29, "kode_kota" => 155, "nama_kota" => "Kabupaten Landak"],
-            ['id' => 75, "id_provinsi" => 29, "kode_kota" => 156, "nama_kota" => "Kabupaten Melawi"],
-            ['id' => 76, "id_provinsi" => 29, "kode_kota" => 157, "nama_kota" => "Kabupaten Sambas"],
-
-            // Kalimantan Tengah
-            ['id' => 77, "id_provinsi" => 30, "kode_kota" => 158, "nama_kota" => "Kabupaten Katingan"],
-            ['id' => 78, "id_provinsi" => 30, "kode_kota" => 159, "nama_kota" => "Kabupaten Kapuas"],
-            ['id' => 79, "id_provinsi" => 30, "kode_kota" => 160, "nama_kota" => "Kabupaten Sukamara"],
-
-            // Kalimantan Utara
-            ['id' => 80, "id_provinsi" => 31, "kode_kota" => 161, "nama_kota" => "Kabupaten Manilau"],
-            ['id' => 81, "id_provinsi" => 31, "kode_kota" => 162, "nama_kota" => "Kota Tarakan"],
-            ['id' => 82, "id_provinsi" => 31, "kode_kota" => 163, "nama_kota" => "Kabupaten Sukamara"],
-
-            // Kalimantan Timur
-            ['id' => 83, "id_provinsi" => 32, "kode_kota" => 164, "nama_kota" => "Kabupaten Kutai Kartanegara"],
-            ['id' => 84, "id_provinsi" => 32, "kode_kota" => 165, "nama_kota" => "Kota Samarinda"],
-            ['id' => 85, "id_provinsi" => 32, "kode_kota" => 166, "nama_kota" => "Kota Balikpapan"],
-
-            // Sulawesi Selatan
-            ['id' => 86, "id_provinsi" => 33, "kode_kota" => 167, "nama_kota" => "Kota Pare-Pare"],
-            ['id' => 87, "id_provinsi" => 33, "kode_kota" => 168, "nama_kota" => "Kota Makassar"],
-            ['id' => 88, "id_provinsi" => 33, "kode_kota" => 179, "nama_kota" => "Kota Palopo"],
-
-            // Sulawesi Tenggara
-            ['id' => 89, "id_provinsi" => 34, "kode_kota" => 180, "nama_kota" => "Kabupaten Wakatobi"],
-            ['id' => 90, "id_provinsi" => 34, "kode_kota" => 181, "nama_kota" => "Kota Kendari"],
-            ['id' => 91, "id_provinsi" => 34, "kode_kota" => 182, "nama_kota" => "Kabupaten Kolaka"],
-
-
-            ]);
+            ['id' =>  1101, "id_provinsi" => 11, "kode_kota" => 1101, "nama_kota" => "KABUPATEN SIMEULUE"],
+            ['id' =>  1102, "id_provinsi" => 11, "kode_kota" => 1102, "nama_kota" => "KABUPATEN ACEH INGKIL"],
+            ['id' =>  1103, "id_provinsi" => 11, "kode_kota" => 1103, "nama_kota" => "KABUPATEN ACEH ELATAN"],
+            ['id' =>  1104, "id_provinsi" => 11, "kode_kota" => 1104, "nama_kota" => "KABUPATEN ACEH ENGGARA"],
+            ['id' =>  1105, "id_provinsi" => 11, "kode_kota" => 1105, "nama_kota" => "KABUPATEN ACEH IMUR"],
+ 
+            ['id' =>  1201, "id_provinsi" => 12, "kode_kota" => 1201,  "nama_kota" => "KABUPATEN NIAS"],
+            ['id' =>  1202, "id_provinsi" => 12, "kode_kota" => 1202,  "nama_kota" => "KABUPATEN MANDAILING NATAL"],
+            ['id' =>  1203, "id_provinsi" => 12, "kode_kota" => 1203,  "nama_kota" => "KABUPATEN TAPANULI SELATAN"],
+            ['id' =>  1204, "id_provinsi" => 12, "kode_kota" => 1204,  "nama_kota" => "KABUPATEN TAPANULI TENGAH"],
+            ['id' =>  1205, "id_provinsi" => 12, "kode_kota" => 1205,  "nama_kota" => "KABUPATEN TAPANULI UTARA"],
+         
+            ['id' =>  1301, "id_provinsi" => 13, "kode_kota" => 1301, "nama_kota" => "KABUPATEN KEPULAUAN MENTAWAI"],
+            ['id' =>  1302, "id_provinsi" => 13, "kode_kota" => 1302, "nama_kota" => "KABUPATEN PESISIR SELATAN"],
+            ['id' =>  1303, "id_provinsi" => 13, "kode_kota" => 1303, "nama_kota" => "KABUPATEN SOLOK"],
+            ['id' =>  1373, "id_provinsi" => 13, "kode_kota" => 1373, "nama_kota" => "KOTA SAWAH LUNTO"],
+            ['id' =>  1374, "id_provinsi" => 13, "kode_kota" => 1374, "nama_kota" => "KOTA PADANG PANJANG"],
+            ['id' =>  1375, "id_provinsi" => 13, "kode_kota" => 1375, "nama_kota" => "KOTA BUKITTINGGI"],
+            ['id' =>  1376, "id_provinsi" => 13, "kode_kota" => 1376, "nama_kota" => "KOTA PAYAKUMBUH"],
+            ['id' =>  1377, "id_provinsi" => 13, "kode_kota" => 1377, "nama_kota" => "KOTA PARIAMAN"],
+ 
+            ['id' =>  1401, "id_provinsi" => 14, "kode_kota" => 1401, "nama_kota" => "KABUPATEN KUANTAN SINGINGI"],
+            ['id' =>  1402, "id_provinsi" => 14, "kode_kota" => 1402, "nama_kota" => "KABUPATEN INDRAGIRI HULU"],
+            ['id' =>  1403, "id_provinsi" => 14, "kode_kota" => 1403, "nama_kota" => "KABUPATEN INDRAGIRI HILIR"],
+            ['id' =>  1404, "id_provinsi" => 14, "kode_kota" => 1404, "nama_kota" => "KABUPATEN PELALAWAN"],
+            ['id' =>  1405, "id_provinsi" => 14, "kode_kota" => 1405, "nama_kota" => "KABUPATEN SIAK"],          
+    
+            ['id' =>  1501, "id_provinsi" => 15, "kode_kota" => 1501, "nama_kota" => "KABUPATEN KERINCI"],
+            ['id' =>  1502, "id_provinsi" => 15, "kode_kota" => 1502, "nama_kota" => "KABUPATEN MERANGIN"],
+            ['id' =>  1503, "id_provinsi" => 15, "kode_kota" => 1503, "nama_kota" => "KABUPATEN SAROLANGUN"],
+            ['id' =>  1504, "id_provinsi" => 15, "kode_kota" => 1504, "nama_kota" => "KABUPATEN BATANG HARI"],
+            ['id' =>  1572, "id_provinsi" => 15, "kode_kota" => 1572, "nama_kota" => "KOTA SUNGAI PENUH"],
+ 
+            ['id' =>  1601, "id_provinsi" => 16, "kode_kota" => 1601, "nama_kota" => "KABUPATEN OGAN KOMERING ULU"],
+            ['id' =>  1602, "id_provinsi" => 16, "kode_kota" => 1602, "nama_kota" => "KABUPATEN OGAN KOMERING ILIR"],
+            ['id' =>  1603, "id_provinsi" => 16, "kode_kota" => 1603, "nama_kota" => "KABUPATEN MUARA ENIM"],
+            ['id' =>  1604, "id_provinsi" => 16, "kode_kota" => 1604, "nama_kota" => "KABUPATEN LAHAT"],
+ 
+            ['id' =>  1701, "id_provinsi" => 17, "kode_kota" => 1701, "nama_kota" => "KABUPATEN BENGKULU SELATAN"],
+            ['id' =>  1702, "id_provinsi" => 17, "kode_kota" => 1702, "nama_kota" => "KABUPATEN REJANG LEBONG"],
+            ['id' =>  1703, "id_provinsi" => 17, "kode_kota" => 1703, "nama_kota" => "KABUPATEN BENGKULU UTARA"],
+            ['id' =>  1704, "id_provinsi" => 17, "kode_kota" => 1704, "nama_kota" => "KABUPATEN KAUR"],
+            ['id' =>  1705, "id_provinsi" => 17, "kode_kota" => 1705, "nama_kota" => "KABUPATEN SELUMA"],
+ 
+            ['id' =>  1801, "id_provinsi" => 18, "kode_kota" => 1801, "nama_kota" => "KABUPATEN LAMPUNG BARAT"],
+            ['id' =>  1802, "id_provinsi" => 18, "kode_kota" => 1802, "nama_kota" => "KABUPATEN TANGGAMUS"],
+            ['id' =>  1803, "id_provinsi" => 18, "kode_kota" => 1803, "nama_kota" => "KABUPATEN LAMPUNG SELATAN"],
+            ['id' =>  1804, "id_provinsi" => 18, "kode_kota" => 1804, "nama_kota" => "KABUPATEN LAMPUNG TIMUR"],
+            ['id' =>  1805, "id_provinsi" => 18, "kode_kota" => 1805, "nama_kota" => "KABUPATEN LAMPUNG TENGAH"],  
+ 
+            ['id' =>  1901, "id_provinsi" => 19, "kode_kota" => 1901, "nama_kota" => "KABUPATEN BANGKA"],
+            ['id' =>  1902, "id_provinsi" => 19, "kode_kota" => 1902, "nama_kota" => "KABUPATEN BELITUNG"],
+            ['id' =>  1903, "id_provinsi" => 19, "kode_kota" => 1903, "nama_kota" => "KABUPATEN BANGKA BARAT"],
+            ['id' =>  1904, "id_provinsi" => 19, "kode_kota" => 1904, "nama_kota" => "KABUPATEN BANGKA TENGAH"],
+            ['id' =>  1905, "id_provinsi" => 19, "kode_kota" => 1905, "nama_kota" => "KABUPATEN BANGKA SELATAN"],
+ 
+            ['id' =>  2101, "id_provinsi" => 21, "kode_kota" => 2101, "nama_kota" => "KABUPATEN KARIMUN"],
+            ['id' =>  2102, "id_provinsi" => 21, "kode_kota" => 2102, "nama_kota" => "KABUPATEN BINTAN"],
+            ['id' =>  2103, "id_provinsi" => 21, "kode_kota" => 2103, "nama_kota" => "KABUPATEN NATUNA"],
+            ['id' =>  2104, "id_provinsi" => 21, "kode_kota" => 2104, "nama_kota" => "KABUPATEN LINGGA"],
+            ['id' =>  2105, "id_provinsi" => 21, "kode_kota" => 2105, "nama_kota" => "KABUPATEN KEPULAUAN ANAMBAS"],
+ 
+            ['id' =>  3101, "id_provinsi" => 31, "kode_kota" => 3101, "nama_kota" => "KABUPATEN KEPULAUAN SERIBU"],
+            ['id' =>  3171, "id_provinsi" => 31, "kode_kota" => 3171, "nama_kota" => "KOTA JAKARTA SELATAN"],
+            ['id' =>  3172, "id_provinsi" => 31, "kode_kota" => 3172, "nama_kota" => "KOTA JAKARTA TIMUR"],
+            ['id' =>  3173, "id_provinsi" => 31, "kode_kota" => 3173, "nama_kota" => "KOTA JAKARTA PUSAT"],
+            ['id' =>  3174, "id_provinsi" => 31, "kode_kota" => 3174, "nama_kota" => "KOTA JAKARTA BARAT"],
+         
+            ['id' =>  3201, "id_provinsi" => 32, "kode_kota" => 3201, "nama_kota" => "KABUPATEN BOGOR"],
+            ['id' =>  3202, "id_provinsi" => 32, "kode_kota" => 3202, "nama_kota" => "KABUPATEN SUKABUMI"],
+            ['id' =>  3203, "id_provinsi" => 32, "kode_kota" => 3203, "nama_kota" => "KABUPATEN CIANJUR"],
+            ['id' =>  3214, "id_provinsi" => 32, "kode_kota" => 3214, "nama_kota" => "KABUPATEN PURWAKARTA"],
+            ['id' =>  3215, "id_provinsi" => 32, "kode_kota" => 3215, "nama_kota" => "KABUPATEN KARAWANG"],
+ 
+            ['id' =>  3301, "id_provinsi" => 33, "kode_kota" => 3301, "nama_kota" => "KABUPATEN CILACAP"],
+            ['id' =>  3302, "id_provinsi" => 33, "kode_kota" => 3302, "nama_kota" => "KABUPATEN BANYUMAS"],
+            ['id' =>  3311, "id_provinsi" => 33, "kode_kota" => 3311, "nama_kota" => "KABUPATEN SUKOHARJO"],
+            ['id' =>  3312, "id_provinsi" => 33, "kode_kota" => 3312, "nama_kota" => "KABUPATEN WONOGIRI"],
+            ['id' =>  3313, "id_provinsi" => 33, "kode_kota" => 3313, "nama_kota" => "KABUPATEN KARANGANYAR"],
+ 
+            ['id' =>  3401, "id_provinsi" => 34, "kode_kota" => 3401, "nama_kota" => "KABUPATEN KULON PROGO"],
+            ['id' =>  3402, "id_provinsi" => 34, "kode_kota" => 3402, "nama_kota" => "KABUPATEN BANTUL"],
+            ['id' =>  3403, "id_provinsi" => 34, "kode_kota" => 3403, "nama_kota" => "KABUPATEN GUNUNG KIDUL"],
+            ['id' =>  3404, "id_provinsi" => 34, "kode_kota" => 3404, "nama_kota" => "KABUPATEN SLEMAN"],
+            ['id' =>  3471, "id_provinsi" => 34, "kode_kota" => 3471, "nama_kota" => "KOTA YOGYAKARTA"],
+ 
+            ['id' =>  3501, "id_provinsi" => 35, "kode_kota" => 3501, "nama_kota" => "KABUPATEN PACITAN"],
+            ['id' =>  3502, "id_provinsi" => 35, "kode_kota" => 3502, "nama_kota" => "KABUPATEN PONOROGO"],
+            ['id' =>  3503, "id_provinsi" => 35, "kode_kota" => 3503, "nama_kota" => "KABUPATEN TRENGGALEK"],
+            ['id' =>  3515, "id_provinsi" => 35, "kode_kota" => 3515, "nama_kota" => "KABUPATEN SIDOARJO"],
+            ['id' =>  3516, "id_provinsi" => 35, "kode_kota" => 3516, "nama_kota" => "KABUPATEN MOJOKERTO"],
+         
+            ['id' =>  3601, "id_provinsi" => 36, "kode_kota" => 3601, "nama_kota" => "KABUPATEN PANDEGLANG"],
+            ['id' =>  3602, "id_provinsi" => 36, "kode_kota" => 3602, "nama_kota" => "KABUPATEN LEBAK"],
+            ['id' =>  3603, "id_provinsi" => 36, "kode_kota" => 3603, "nama_kota" => "KABUPATEN TANGERANG"],
+            ['id' =>  3604, "id_provinsi" => 36, "kode_kota" => 3604, "nama_kota" => "KABUPATEN SERANG"],
+            ['id' =>  3671, "id_provinsi" => 36, "kode_kota" => 3671, "nama_kota" => "KOTA TANGERANG"],
+            
+            ['id' =>  5101, "id_provinsi" => 51, "kode_kota" => 5101, "nama_kota" => "KABUPATEN JEMBRANA"],
+            ['id' =>  5102, "id_provinsi" => 51, "kode_kota" => 5102, "nama_kota" => "KABUPATEN TABANAN"],
+            ['id' =>  5103, "id_provinsi" => 51, "kode_kota" => 5103, "nama_kota" => "KABUPATEN BADUNG"],
+            ['id' =>  5104, "id_provinsi" => 51, "kode_kota" => 5104, "nama_kota" => "KABUPATEN GIANYAR"],
+            ['id' =>  5105, "id_provinsi" => 51, "kode_kota" => 5105, "nama_kota" => "KABUPATEN KLUNGKUNG"],
+     
+            ['id' =>  5201, "id_provinsi" => 52, "kode_kota" => 5201, "nama_kota" => "KABUPATEN LOMBOK BARAT"],
+            ['id' =>  5202, "id_provinsi" => 52, "kode_kota" => 5202, "nama_kota" => "KABUPATEN LOMBOK TENGAH"],
+            ['id' =>  5203, "id_provinsi" => 52, "kode_kota" => 5203, "nama_kota" => "KABUPATEN LOMBOK TIMUR"],
+            ['id' =>  5204, "id_provinsi" => 52, "kode_kota" => 5204, "nama_kota" => "KABUPATEN SUMBAWA"],
+            ['id' =>  5205, "id_provinsi" => 52, "kode_kota" => 5205, "nama_kota" => "KABUPATEN DOMPU"],
+ 
+            ['id' =>  5301, "id_provinsi" => 53, "kode_kota" => 5301, "nama_kota" => "KABUPATEN SUMBA BARAT"],
+            ['id' =>  5302, "id_provinsi" => 53, "kode_kota" => 5302, "nama_kota" => "KABUPATEN SUMBA TIMUR"],
+            ['id' =>  5303, "id_provinsi" => 53, "kode_kota" => 5303, "nama_kota" => "KABUPATEN KUPANG"],
+            ['id' =>  5304, "id_provinsi" => 53, "kode_kota" => 5304, "nama_kota" => "KABUPATEN TIMOR TENGAH SELATAN"],
+            ['id' =>  5305, "id_provinsi" => 53, "kode_kota" => 5305, "nama_kota" => "KABUPATEN TIMOR TENGAH UTARA"],
+         
+            ['id' =>  6101, "id_provinsi" => 61, "kode_kota" => 6101, "nama_kota" => "KABUPATEN SAMBAS"],
+            ['id' =>  6102, "id_provinsi" => 61, "kode_kota" => 6102, "nama_kota" => "KABUPATEN BENGKAYANG"],
+            ['id' =>  6103, "id_provinsi" => 61, "kode_kota" => 6103, "nama_kota" => "KABUPATEN LANDAK"],
+            ['id' =>  6104, "id_provinsi" => 61, "kode_kota" => 6104, "nama_kota" => "KABUPATEN MEMPAWAH"],
+            ['id' =>  6172, "id_provinsi" => 61, "kode_kota" => 6172, "nama_kota" => "KOTA SINGKAWANG"],
+ 
+            ['id' =>  6201, "id_provinsi" => 62, "kode_kota" => 6201, "nama_kota" => "KABUPATEN KOTAWARINGIN BARAT"],
+            ['id' =>  6202, "id_provinsi" => 62, "kode_kota" => 6202, "nama_kota" => "KABUPATEN KOTAWARINGIN TIMUR"],
+            ['id' =>  6203, "id_provinsi" => 62, "kode_kota" => 6203, "nama_kota" => "KABUPATEN KAPUAS"],
+            ['id' =>  6204, "id_provinsi" => 62, "kode_kota" => 6204, "nama_kota" => "KABUPATEN BARITO SELATAN"],
+            ['id' =>  6210, "id_provinsi" => 62, "kode_kota" => 6210, "nama_kota" => "KABUPATEN PULANG PISAU"],
+ 
+            ['id' =>  6301, "id_provinsi" => 63, "kode_kota" => 6301, "nama_kota" => "KABUPATEN TANAH LAUT"],
+            ['id' =>  6302, "id_provinsi" => 63, "kode_kota" => 6302, "nama_kota" => "KABUPATEN KOTA BARU"],
+            ['id' =>  6303, "id_provinsi" => 63, "kode_kota" => 6303, "nama_kota" => "KABUPATEN BANJAR"],
+            ['id' =>  6304, "id_provinsi" => 63, "kode_kota" => 6304, "nama_kota" => "KABUPATEN BARITO KUALA"],
+            ['id' =>  6305, "id_provinsi" => 63, "kode_kota" => 6305, "nama_kota" => "KABUPATEN TAPIN"],
+ 
+            ['id' =>  6401, "id_provinsi" => 64, "kode_kota" => 6401, "nama_kota" => "KABUPATEN PASER"],
+            ['id' =>  6402, "id_provinsi" => 64, "kode_kota" => 6402, "nama_kota" => "KABUPATEN KUTAI BARAT"],
+            ['id' =>  6403, "id_provinsi" => 64, "kode_kota" => 6403, "nama_kota" => "KABUPATEN KUTAI KARTANEGARA"],
+            ['id' =>  6404, "id_provinsi" => 64, "kode_kota" => 6404, "nama_kota" => "KABUPATEN KUTAI TIMUR"],
+            ['id' =>  6405, "id_provinsi" => 64, "kode_kota" => 6405, "nama_kota" => "KABUPATEN BERAU"],
+      
+            ['id' =>  6501, "id_provinsi" => 65, "kode_kota" => 6501, "nama_kota" => "KABUPATEN MALINAU"],
+            ['id' =>  6502, "id_provinsi" => 65, "kode_kota" => 6502, "nama_kota" => "KABUPATEN BULUNGAN"],
+            ['id' =>  6503, "id_provinsi" => 65, "kode_kota" => 6503, "nama_kota" => "KABUPATEN TANA TIDUNG"],
+            ['id' =>  6504, "id_provinsi" => 65, "kode_kota" => 6504, "nama_kota" => "KABUPATEN NUNUKAN"],
+            ['id' =>  6571, "id_provinsi" => 65, "kode_kota" => 6571, "nama_kota" => "KOTA TARAKAN"],
+ 
+            ['id' =>  7101, "id_provinsi" => 71, "kode_kota" => 7101, "nama_kota" => "KABUPATEN BOLAANG MONGONDOW"],
+            ['id' =>  7102, "id_provinsi" => 71, "kode_kota" => 7102, "nama_kota" => "KABUPATEN MINAHASA"],
+            ['id' =>  7103, "id_provinsi" => 71, "kode_kota" => 7103, "nama_kota" => "KABUPATEN KEPULAUAN SANGIHE"],
+            ['id' =>  7104, "id_provinsi" => 71, "kode_kota" => 7104, "nama_kota" => "KABUPATEN KEPULAUAN TALAUD"],
+            ['id' =>  7105, "id_provinsi" => 71, "kode_kota" => 7105, "nama_kota" => "KABUPATEN MINAHASA SELATAN"],
+          
+            ['id' =>  7201, "id_provinsi" => 72, "kode_kota" => 7201, "nama_kota" => "KABUPATEN BANGGAI KEPULAUAN"],
+            ['id' =>  7202, "id_provinsi" => 72, "kode_kota" => 7202, "nama_kota" => "KABUPATEN BANGGAI"],
+            ['id' =>  7203, "id_provinsi" => 72, "kode_kota" => 7203, "nama_kota" => "KABUPATEN MOROWALI"],
+            ['id' =>  7204, "id_provinsi" => 72, "kode_kota" => 7204, "nama_kota" => "KABUPATEN POSO"],
+            ['id' =>  7205, "id_provinsi" => 72, "kode_kota" => 7205, "nama_kota" => "KABUPATEN DONGGALA"],
+            ['id' =>  7271, "id_provinsi" => 72, "kode_kota" => 7271, "nama_kota" => "KOTA PALU"],
+ 
+            ['id' =>  7301, "id_provinsi" => 73, "kode_kota" => 7301, "nama_kota" => "KABUPATEN KEPULAUAN SELAYAR"],
+            ['id' =>  7302, "id_provinsi" => 73, "kode_kota" => 7302, "nama_kota" => "KABUPATEN BULUKUMBA"],
+            ['id' =>  7303, "id_provinsi" => 73, "kode_kota" => 7303, "nama_kota" => "KABUPATEN BANTAENG"],
+            ['id' =>  7304, "id_provinsi" => 73, "kode_kota" => 7304, "nama_kota" => "KABUPATEN JENEPONTO"],
+            
+            ['id' =>  7401, "id_provinsi" => 74, "kode_kota" => 7401, "nama_kota" =>"KABUPATEN BUTON"],
+            ['id' =>  7402, "id_provinsi" => 74, "kode_kota" => 7402, "nama_kota" =>"KABUPATEN MUNA"],
+            ['id' =>  7403, "id_provinsi" => 74, "kode_kota" => 7403, "nama_kota" =>"KABUPATEN KONAWE"],
+   
+            ['id' =>  7501, "id_provinsi" => 75, "kode_kota" => 7501, "nama_kota" =>"KABUPATEN BOALEMO"],
+            ['id' =>  7502, "id_provinsi" => 75, "kode_kota" => 7502, "nama_kota" =>"KABUPATEN GORONTALO"],
+            ['id' =>  7503, "id_provinsi" => 75, "kode_kota" => 7503, "nama_kota" =>"KABUPATEN POHUWATO"],
+            ['id' =>  7504, "id_provinsi" => 75, "kode_kota" => 7504, "nama_kota" =>"KABUPATEN BONE BOLANGO"],
+            ['id' =>  7505, "id_provinsi" => 75, "kode_kota" => 7505, "nama_kota" =>"KABUPATEN GORONTALO UTARA"],
+ 
+            ['id' =>  7601, "id_provinsi" => 76, "kode_kota" => 7601, "nama_kota" =>"KABUPATEN MAJENE"],
+            ['id' =>  7602, "id_provinsi" => 76, "kode_kota" => 7602, "nama_kota" =>"KABUPATEN POLEWALI MANDAR"],
+            ['id' =>  7603, "id_provinsi" => 76, "kode_kota" => 7603, "nama_kota" =>"KABUPATEN MAMASA"],
+            ['id' =>  7604, "id_provinsi" => 76, "kode_kota" => 7604, "nama_kota" =>"KABUPATEN MAMUJU"],
+            ['id' =>  7605, "id_provinsi" => 76, "kode_kota" => 7605, "nama_kota" =>"KABUPATEN MAMUJU UTARA"],
+            
+            ['id' =>  8101, "id_provinsi" => 81, "kode_kota" => 8101, "nama_kota" =>"KABUPATEN MALUKU TENGGARA BARAT"],
+            ['id' =>  8102, "id_provinsi" => 81, "kode_kota" => 8102, "nama_kota" =>"KABUPATEN MALUKU TENGGARA"],
+            ['id' =>  8103, "id_provinsi" => 81, "kode_kota" => 8103, "nama_kota" =>"KABUPATEN MALUKU TENGAH"],
+            ['id' =>  8104, "id_provinsi" => 81, "kode_kota" => 8104, "nama_kota" =>"KABUPATEN BURU"],
+            ['id' =>  8105, "id_provinsi" => 81, "kode_kota" => 8105, "nama_kota" =>"KABUPATEN KEPULAUAN ARU"],
+ 
+            ['id' =>  8201, "id_provinsi" => 82, "kode_kota" => 8201, "nama_kota" =>"KABUPATEN HALMAHERA BARAT"],
+            ['id' =>  8202, "id_provinsi" => 82, "kode_kota" => 8202, "nama_kota" =>"KABUPATEN HALMAHERA TENGAH"],
+            ['id' =>  8203, "id_provinsi" => 82, "kode_kota" => 8203, "nama_kota" =>"KABUPATEN KEPULAUAN SULA"],
+            ['id' =>  8204, "id_provinsi" => 82, "kode_kota" => 8204, "nama_kota" =>"KABUPATEN HALMAHERA SELATAN"],
+            ['id' =>  8271, "id_provinsi" => 82, "kode_kota" => 8271, "nama_kota" =>"KOTA TERNATE"],
+            ['id' =>  8272, "id_provinsi" => 82, "kode_kota" => 8272, "nama_kota" =>"KOTA TIDORE KEPULAUAN"],
+ 
+            ['id' =>  9401, "id_provinsi" => 94, "kode_kota" => 9401, "nama_kota" =>"KABUPATEN MERAUKE"],
+            ['id' =>  9402, "id_provinsi" => 94, "kode_kota" => 9402, "nama_kota" =>"KABUPATEN JAYAWIJAYA"],
+            ['id' =>  9403, "id_provinsi" => 94, "kode_kota" => 9403, "nama_kota" =>"KABUPATEN JAYAPURA"],
+            ['id' =>  9404, "id_provinsi" => 94, "kode_kota" => 9404, "nama_kota" =>"KABUPATEN NABIRE"],
+            ['id' =>  9408, "id_provinsi" => 94, "kode_kota" => 9408, "nama_kota" =>"KABUPATEN KEPULAUAN YAPEN"],
+  
+                                    
+         ]);
     }
 }
