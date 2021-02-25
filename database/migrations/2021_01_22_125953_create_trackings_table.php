@@ -19,9 +19,9 @@ class CreateTrackingsTable extends Migration
             $table->foreign('id_rw')
                     ->references('id')
                     ->on('rws')->onDelete('cascade');
-                    $table->string('positif');
-                    $table->string('sembuh');
-                    $table->string('meninggal');
+                    $table->Integer('positif');
+                    $table->Integer('sembuh');
+                    $table->Integer('meninggal');
                     $table->date('tanggal');
             $table->timestamps();
         });
