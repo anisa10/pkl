@@ -156,12 +156,13 @@
               @endphp
 
               @foreach($tampil as $tmp)
+
                   <tr>
                     <th scope="row"><center>{{$no++}}</center></th>
                       <td><center>{{$tmp->nama_provinsi}}</center></td>
-                      <td><center>{{number_format($tmp->Positif)}}</center></td>
-                      <td><center>{{number_format($tmp->Sembuh)}}</center></td>
-                      <td><center>{{number_format($tmp->Meninggal)}}</center></td>
+                      <td><center>{{number_format($tmp->positif)}}</center></td>
+                      <td><center>{{number_format($tmp->sembuh)}}</center></td>
+                      <td><center>{{number_format($tmp->meninggal)}}</center></td>
                   </tr>
                   
                 </tbody>
