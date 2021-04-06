@@ -26,7 +26,7 @@
             </a>
           </li>
             
-          <li class="nav-item has-treeview">
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-globe-americas"></i>
               <p>
@@ -49,7 +49,7 @@
               </li>
               
             </ul>
-          </li>
+          </li> -->
           
          
           <li class="nav-item has-treeview">
@@ -99,7 +99,13 @@
               </li>
             </ul>
           </li>
-          
+              <li class="nav-item">
+                <a href="{{url('report-provinsi')}}" class="nav-link">
+                  <i class="nav-icon fas fa-file-signature"></i>
+                  <p>Laporan</p>
+                </a>
+              </li>
+            
           <li class="nav-item">
           <a href="{{ route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();" class="nav-link">  <i class="fas fa-unlock-alt nav-icon"></i>Logout

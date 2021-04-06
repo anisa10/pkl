@@ -3,24 +3,26 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Flynsarmy\CsvSeeder\CsvSeeder;
 use DB;
 
-class KelurahanSeeder extends Seeder
+class KelurahanSeeder extends CsvSeeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
+    public function __construct()
+    {
+        $this->table = 'kelurahans';
+        $this->filename = base_path().'/database/seeders/csvs/kelurahan.csv';   
+    }
+
     public function run()
     {
-        DB::table('Kelurahans')->insert([   
-            ['id' => 1101010001, "id_kecamatan" => 1101010, "nama_kelurahan" => "LATIUNG"],
-            ['id' => 1101010002, "id_kecamatan" => 1101010, "nama_kelurahan" => "LABUHAN BAJAU"],
-                    
-            ['id' => 1101020022, "id_kecamatan" => 1101020, "nama_kecamatan" => "AIR PINANG"],
-            ['id' => 1101020023, "id_kecamatan" => 1101020, "nama_kecamatan" => "KUALA MAKMUR"],            
-    
-        ]);
+        DB::disableQueryLog();
+
+        parent::run();
     }
 }

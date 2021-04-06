@@ -14,14 +14,6 @@
                             @csrf
 
                 <div class="form-group">
-                    <div class="mb-12>
-                        <label for="exampleInputPassword1" class="form-label"><b>Kode Kecamatan</b></label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="kode_kecamatan"
-                        value="{{$kecamatan->kode_kecamatan}}" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
                     <label for="">Kota</label>
                         <select name="id_kota" class="form-control" required>
                             @foreach($kota as $data)
@@ -40,7 +32,8 @@
                 </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href=" {{ route('kecamatan.index') }} " class="float-right btn btn-danger">Kembali</a>
                     </div>
                         </form>
                     </div>

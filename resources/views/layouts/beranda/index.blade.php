@@ -6,6 +6,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <p style="text-align:center"><b>Data Kasus Penyebaran Virus Corona di Indonesia</b></p>
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">

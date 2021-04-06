@@ -54,7 +54,6 @@ class KecamatanController extends Controller
  ]);
 
         $kecamatan= new Kecamatan();
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->id_kota = $request->id_kota;
         $kecamatan->save();
@@ -97,7 +96,6 @@ class KecamatanController extends Controller
     public function update(Request $request, $id)
     {
         $kecamatan= Kecamatan::findOrFail($id);
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->id_kota = $request->id_kota;
         $kecamatan->save();

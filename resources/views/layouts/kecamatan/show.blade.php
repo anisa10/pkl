@@ -14,14 +14,6 @@
                             @csrf
                 
                 <div class="card-body">
-                   <div class="form-group">
-                        <div class="mb-12>
-                            <label for="exampleInputEmail1" class="form-label"><b>Kode Kecamatan</b></label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" 
-                            aria-describedby="emailHelp" name="kode_kecamatan"value="{{$kecamatan->kode_kecamatan}}" readonly>
-                        </div>
-                    </div>
-                
                     <div class="form-group">
                         <label for="">Kota</label>
                             <input type="text" name="id_kota" class="form-control" 
@@ -37,7 +29,7 @@
                     </div>
                     
                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Kembali</button>
+                        <button type="submit" class="float-right btn btn-success">Kembali</button>
                     </div>
                         </form>
                     </div>

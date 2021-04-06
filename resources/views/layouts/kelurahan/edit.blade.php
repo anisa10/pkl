@@ -32,7 +32,8 @@
                 </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href=" {{ route('kelurahan.index') }} " class="float-right btn btn-danger">Kembali</a>
                     </div>
                         </form>
                     </div>

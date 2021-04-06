@@ -39,7 +39,6 @@
                     <thead>
                       <tr class="bg-teal">
                         <th scope="col"><center>No</center></th>
-                        <th scope="col"><center>Kode Kecamatan</center></th>
                         <th scope="col"><center>Kota</center></th>
                         <th scope="col"><center>Nama Kecamatan</center></th>
                         <th scope="col"><center>Action</center></th>
@@ -50,7 +49,6 @@
                          @foreach($kecamatan as $data)
                             <tr>
                                 <th scoppe="row"><center>{{$no++}}</center></th>
-                                <td><center>{{$data->kode_kecamatan}}</center></td>
                                 <td><center>{{$data->kota->nama_kota}}</center></td>
                                 <td><center>{{$data->nama_kecamatan}}</center></td>
                                 <td><form action="{{route('kecamatan.destroy',$data->id)}}" method="post">
